@@ -114,80 +114,124 @@ header.shadow{
     background-size: cover;
     gap: 1.5rem;
 } */
-/*Story*/
-.story{
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(0rem,auto));
-    background-color: rgb(22, 27, 40);
-    background-image: url(./img/area1.webp);
-    background-repeat: no-repeat;
-    /* background-attachment:fixed; */
-    background-size: cover;
-    gap: 1.5rem;
-    position: relative;
+/* Story */
+.story {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0rem, auto));
+  background-color: rgb(22, 27, 40);
+  background-image: url(./img/area1.webp);
+  background-repeat: no-repeat;
+  /* background-attachment:fixed; */
+  background-size: cover;
+  gap: 1.5rem;
+  position: relative;
 }
 
-.story-text h2{
-    font-size: 45px;
-    text-transform: uppercase;
-    padding-left: 150px;
-    color: #ffff;
-    top: 10%;
-    position: relative;
-    letter-spacing: 1px;
+/* Modified CSS for alignment */
+.story-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Vertically center content within .story-text */
 }
-.story-img h3{
-    font-size: 25px;
-    text-transform: uppercase;
-    padding-left: 100px;
-    color: #ffff;
-    top: 3%;
-    position: relative;
+
+.story-text h2 {
+  font-size: 45px;
+  text-transform: uppercase;
+  padding-left: 150px;
+  color: #ffff;
+  letter-spacing: 1px;
+  margin-bottom: 20px; /* Add margin for spacing */
 }
+
+.story-text p {
+  font-weight: 400;
+  font-size: 16px;
+  padding-left: 150px;
+  margin-top: 0; /* Remove default top margin */
+  margin-bottom: 20px; /* Add margin for spacing */
+  color: #adb0bc;
+}
+
+.story-img h3 {
+  font-size: 25px;
+  text-transform: uppercase;
+  padding-left: 100px;
+  color: #ffff;
+  top: 3%;
+  position: relative;
+}
+.story-img p {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-left: 400px;
+  color: #adb0bc;
+  top: 2%;
+  position: relative;
+}
+
 .story-text h2::after {
-    background-image: url(./img/underline.svg);
-    content: "";
-    display: block;
-    filter: invert(0) sepia(0) saturate(0) hue-rotate(346deg) brightness(104%) contrast(100%);
-    height: 5px;
-    margin: 40px auto 0;
-    width: 65px;
-    margin-left: 5px;
+  background-image: url(./img/underline.svg);
+  content: "";
+  display: block;
+  filter: invert(0) sepia(0) saturate(0) hue-rotate(346deg) brightness(104%) contrast(100%);
+  height: 5px;
+  margin: 40px auto 0;
+  width: 65px;
+  margin-left: 5px;
 }
+
 .story-img img {
-    width: 100%;
-    margin-top: 50px;
-    border-radius: 2.5rem;
-    /* height: 260px; */
-    margin-left: -0.5rem;
-    filter: drop-shadow(4px 4px 0px #8c52ff); 
+  width: 100%;
+  margin-top: 150px;
+  border-radius: 2.5rem;
+  /* height: 260px; */
+  margin-left: -0.5rem;
+  filter: drop-shadow(4px 4px 0px #8c52ff);
 }
-.story-text p{
-    font-weight: 400;
-    font-size: 16px;
-    padding-left: 150px;
-    margin-top: 2rem;
-    color: #adb0bc;
-    top: 10%;
-    position: relative;
+
+/* stats-container and other styles (no changes here) */
+.stats-container {
+  display: flex;
+  justify-content: flex-start; /* Align stats to the left */
+  margin-bottom: 20px; /* Add some space between stats and button */
+  padding-left: 150px;
+  position: relative;
 }
-/* button stars */
+
+.stat {
+  text-align: center; /* Center text within each stat */
+  margin-right: 30px; /* Add space between stats */
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffff; /* Or your desired color */
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #adb0bc; /* Or your desired color */
+}
+
 button {
-    position: relative;
-    padding: 12px 35px;
-    background: #8c52ff;
-    font-size: 17px;
-    font-weight: 500;
-    top: 15%;
-    color: #181818;
-    border: 3px solid #8c52ff;
-    border-radius: 8px;
-    box-shadow: 0 0 0 #8c52ff;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    left: 150px;
-  }
+  /* Existing button styles */
+  position: relative;
+  padding: 12px 35px;
+  background: #8c52ff;
+  font-size: 17px;
+  font-weight: 500;
+  color: #181818;
+  border: 3px solid #8c52ff;
+  border-radius: 8px;
+  box-shadow: 0 0 0 #8c52ff;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  left: 150px;
+}
   
   .star-1, .star-2, .star-3, .star-4, .star-5, .star-6 {
     position: absolute;
@@ -510,7 +554,7 @@ footer {
     display: block;
     filter: invert(0) sepia(0) saturate(0) hue-rotate(346deg) brightness(104%) contrast(100%);
     height: 5px;
-    margin: 20px auto 0;
+    margin: 30px auto 0;
     width: 65px;
 }
 .platform-description {
