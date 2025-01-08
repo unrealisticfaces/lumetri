@@ -9,6 +9,14 @@
     <script src="../src/mods.js"></script>
 </head>
 <body>
+     <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+            document.addEventListener('keydown', function(event) {
+            if (event.key === 'F12') {
+                event.preventDefault();
+                }
+            });
+    </script>
     <header>
         <!-- Menu icon -->
         <a href="../index.html" class="logo"> 
